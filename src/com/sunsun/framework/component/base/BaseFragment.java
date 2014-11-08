@@ -9,12 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.Toast;
 
-/**
- * 描述:所有Fragment的父类,提供刷新UI的Handler
- * 
- * @author chenys
- * @since 2013-7-29 上午11:03:47
- */
+
 public class BaseFragment extends Fragment {
 
 	protected View mView;

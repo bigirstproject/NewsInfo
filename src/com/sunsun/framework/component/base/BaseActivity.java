@@ -10,12 +10,7 @@ import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-/**
- * 描述 具备后台线程和UI线程更新
- * 
- * @author chenjinyuan
- * @since 2013-12-2 上午9:45:00
- */
+
 public class BaseActivity extends Activity {
 
 	private Toast mToast;

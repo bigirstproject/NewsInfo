@@ -7,12 +7,7 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 
-/**
- * 描述:可处理耗时操作的fragment
- * 
- * @author xuhaichao
- * @since 2013-8-12 上午11:51:02
- */
+
 public abstract class BaseWorkerFragment extends BaseFragment {
 
 	protected HandlerThread mHandlerThread;

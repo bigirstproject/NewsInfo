@@ -7,12 +7,7 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.Message;
 
-/**
- * 描述 具备后台线程和UI线程更新
- * 
- * @author chenjinyuan
- * @since 2013-12-2 上午9:45:00
- */
+
 public abstract class BaseWorkerActivity extends BaseActivity {
 
 	protected HandlerThread mHandlerThread;

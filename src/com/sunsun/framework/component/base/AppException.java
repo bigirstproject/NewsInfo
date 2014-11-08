@@ -13,12 +13,7 @@ import com.sunsun.framework.component.debug.KGLog;
 
 import android.os.Environment;
 
-/**
- * 描述:应用程序异常类：用于捕获异常和提示错误信息
- * 
- * @author chenys
- * @since 2013-7-22 下午12:09:38
- */
+
 public class AppException extends Exception {
 
 	private static final long serialVersionUID = -6006931656862906182L;
