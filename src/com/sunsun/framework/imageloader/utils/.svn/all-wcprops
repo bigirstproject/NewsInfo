@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/KugouLibrary/!svn/ver/3/trunk/KugouLibrary/src/com/kugou/framework/imageloader/utils
+END
+L.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/KugouLibrary/!svn/ver/3/trunk/KugouLibrary/src/com/kugou/framework/imageloader/utils/L.java
+END
+IoUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/KugouLibrary/!svn/ver/3/trunk/KugouLibrary/src/com/kugou/framework/imageloader/utils/IoUtils.java
+END
+StorageUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/KugouLibrary/!svn/ver/3/trunk/KugouLibrary/src/com/kugou/framework/imageloader/utils/StorageUtils.java
+END
+ImageSizeUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/KugouLibrary/!svn/ver/3/trunk/KugouLibrary/src/com/kugou/framework/imageloader/utils/ImageSizeUtils.java
+END
