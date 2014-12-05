@@ -28,6 +28,8 @@ public class NetWorkUtil {
 
 		public static final String NET_3G = "3G";
 
+		public static final String NET_4G = "4G";
+
 		public static final String WIFI = "wifi";
 
 		public static final String NET_CMNET = "cmnet";
@@ -88,8 +90,11 @@ public class NetWorkUtil {
 				|| netType == TelephonyManager.NETWORK_TYPE_EDGE
 				|| netType == TelephonyManager.NETWORK_TYPE_CDMA
 				|| netType == TelephonyManager.NETWORK_TYPE_1xRTT
-				|| netType == 11) {
+				|| netType == TelephonyManager.NETWORK_TYPE_IDEN) {
 			return NetworkType.NET_2G;
+		}
+		if (netType == TelephonyManager.NETWORK_TYPE_LTE) {
+			return NetworkType.NET_4G;
 		}
 		return NetworkType.NET_3G;
 	}

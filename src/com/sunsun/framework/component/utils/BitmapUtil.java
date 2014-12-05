@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -175,16 +176,16 @@ public class BitmapUtil {
 		return bitmap;
 	}
 
-	// public static Bitmap decodeResource(Resources res, int id) {
-	// Bitmap bitmap = null;
-	// InputStream is =
-	// KugouApplication.getContext().getResources().openRawResource(id);
-	// bitmap = decodeStream(is);
-	// if (bitmap == null) {
-	// bitmap = Bitmap.createBitmap(1, 1, Config.ALPHA_8);
-	// }
-	// return bitmap;
-	// }
+	public static Bitmap decodeResource(Context context,Resources res, int id) {
+		Bitmap bitmap = null;
+		InputStream is = context.getResources()
+				.openRawResource(id);
+		bitmap = decodeStream(is);
+		if (bitmap == null) {
+			bitmap = Bitmap.createBitmap(1, 1, Config.ALPHA_8);
+		}
+		return bitmap;
+	}
 
 	private static int computeSampleSize(BitmapFactory.Options options,
 			int minSideLength, int maxNumOfPixels) {
