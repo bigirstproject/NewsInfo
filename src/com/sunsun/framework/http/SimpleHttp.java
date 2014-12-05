@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 25842bf7b7699de5b958723ca6d46b97dbe0d6a0
 package com.sunsun.framework.http;
 
 import java.io.ByteArrayOutputStream;
@@ -18,6 +21,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 /**
  * 描述:基本Http[Get、Post]
  * 
+<<<<<<< HEAD
  * @since 2013年7月15日 上午11:41:32
  */
 public class SimpleHttp {
@@ -91,4 +95,81 @@ public class SimpleHttp {
 
         return bytes;
     }
+=======
+ */
+public class SimpleHttp {
+
+	/**
+	 * get 请求
+	 * 
+	 * @param url
+	 * @return
+	 * @throws IOException
+	 * @throws ClientProtocolException
+	 */
+	public static byte[] RequestGet(String url) throws ClientProtocolException,
+			IOException {
+
+		HttpClient client = new DefaultHttpClient();
+
+		HttpGet reg = new HttpGet(url);
+		HttpResponse res = null;
+
+		res = client.execute(reg);
+
+		if (res.getStatusLine().getStatusCode() == 200) {
+
+			return InputStream2bytes(res.getEntity().getContent());
+		}
+
+		return null;
+	}
+
+	/**
+	 * post 请求
+	 * 
+	 * @param url
+	 * @param json
+	 *            String json
+	 * @return
+	 * @throws IOException
+	 * @throws MalformedURLException
+	 */
+	public static byte[] RequestPost(String url, String json)
+			throws MalformedURLException, IOException {
+		HttpURLConnection httpcon = (HttpURLConnection) ((new URL(url)
+				.openConnection()));
+
+		httpcon.setDoOutput(true);
+		httpcon.setRequestProperty("Content-Type", "application/json");
+		httpcon.setRequestProperty("Accept", "application/json");
+		httpcon.setRequestMethod("POST");
+		httpcon.connect();
+
+		byte[] outputBytes = json.getBytes("UTF-8");
+		OutputStream os = httpcon.getOutputStream();
+		os.write(outputBytes);
+		os.close();
+
+		int status = httpcon.getResponseCode();
+		if (status == 200) {
+			return InputStream2bytes(httpcon.getInputStream());
+		}
+		return null;
+	}
+
+	private static byte[] InputStream2bytes(InputStream is) throws IOException {
+		ByteArrayOutputStream bytestream = new ByteArrayOutputStream();
+		byte[] buff = new byte[100];
+		int rc = 0;
+		while ((rc = is.read(buff, 0, 100)) > 0) {
+			bytestream.write(buff, 0, rc);
+		}
+
+		byte bytes[] = bytestream.toByteArray();
+		bytestream.close();
+
+		return bytes;
+	}
+>>>>>>> 25842bf7b7699de5b958723ca6d46b97dbe0d6a0
 }
