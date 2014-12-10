@@ -1,6 +1,7 @@
 package com.sunsun.newsinfo;
 
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
@@ -8,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+=======
+import android.support.v7.app.ActionBarActivity;
+>>>>>>> 76524b5c0bca283e7362299123b290c1314bba08
 
 public class MainActivity extends ActionBarActivity {
 
@@ -16,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+<<<<<<< HEAD
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
@@ -60,6 +65,8 @@ public class MainActivity extends ActionBarActivity {
 	public boolean dispatchTrackballEvent(MotionEvent ev) {
 		// TODO Auto-generated method stub
 		return super.dispatchTrackballEvent(ev);
+=======
+>>>>>>> 76524b5c0bca283e7362299123b290c1314bba08
 	}
 
 }
