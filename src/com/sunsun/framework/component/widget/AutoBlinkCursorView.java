@@ -5,6 +5,7 @@ package com.sunsun.framework.component.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -82,7 +83,7 @@ public class AutoBlinkCursorView extends ImageView {
 		if (w > 0)
 			startBlink();
 	}
-
+	
 	@Override
 	public void setVisibility(int visibility) {
 		super.setVisibility(visibility);
